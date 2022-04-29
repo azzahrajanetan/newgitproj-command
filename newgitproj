@@ -1,0 +1,40 @@
+#!/usr/bin/env python3.8
+
+#using a code to create a new git project:
+
+import os
+
+#creating the main project folder
+repo_name = input("Enter new project name: ")
+os.mkdir(f"{repo_name}")
+os.chdir(f"{repo_name}")
+
+# creating .git
+os.system(f"git init")
+
+# creating a file for the project
+create_file = input("Enter your file name and extension: ")
+os.system(f"touch {create_file}")
+
+# adding to and commiting to git repo
+os.system(f"git add .")
+#status check
+os.system(f"git status")
+
+message = input("Enter Git Commit message: ")
+os.system(f"git commit -m '{message}'")
+
+# getting confirmation to git push
+push_confirm = input("Proceed with git push? [y/n] : ")
+
+while True:
+    if push_confirm == "y":
+        repo_url = input("Provide your Git Repo URL: ")
+        os.system("git branch -M main")
+        os.system(f"git remote add origin {repo_url}")
+        os.system("git push -u origin main")
+        break
+    if push_confirm == "n":
+        print("Project not pushed to github")
+        break
+        
