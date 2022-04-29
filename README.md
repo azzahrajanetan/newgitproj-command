@@ -15,3 +15,4 @@ Terminal used for this: Ubuntu
 Note:
 - You will need to save the code file and make the file executable via `chmod +x newgitproj`.
 - Copy/move the file to your /bin folder for it to work in your terminal.
+- Before pushing the new Git project using this command, you will need to create a new repository on Github.com and use the repository URL.
