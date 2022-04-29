@@ -1,1 +1,1 @@
-This is a test file uploaded during the first commit using the command `newgitproj`.
+Hi! This is a test file uploaded during the first commit using the command `newgitproj`.
